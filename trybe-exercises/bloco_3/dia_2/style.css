@@ -1,0 +1,26 @@
+/* <link rel="stylesheet" type="text/css" href="style.css"> para adicionar em otras pages html usar esse formato de linha */
+body {
+    font-size: 16px;
+  }
+  h1 {
+      font-size: 65px;
+      color: orange;
+      font-family: sans-serif;
+      /* ???text-decoration: olive; */
+  }
+  ul{
+    background-color: gray;
+    line-height: 35px;
+    }
+  .changeback {
+    background-color: green;
+    }
+  p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: italic;
+    text-align: center;
+  }
+  #amarelo {background-color: yellow;}
+  #vermelho {background-color: red;}
+  #marrom {background-color: brown;}
