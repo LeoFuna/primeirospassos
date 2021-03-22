@@ -2,6 +2,9 @@ body{
     width:720px;
     margin-left: 15px;
 }
+.geral{
+    background-color:lightgray;
+}
 header{
     text-align: right;
     text-transform: uppercase;
@@ -14,7 +17,7 @@ h1{
     display: inline-block;
     font-size: 20px;
     margin-right: 5%;
-    margin-left: 0%;S
+    margin-left: 0%;
 }
 header nav{
     width: 30%;
