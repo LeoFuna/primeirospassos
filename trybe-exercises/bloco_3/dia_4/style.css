@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+body{
+      width: 720px;
+}
+section ul li{
+      list-style: none;
+}
+.podium{
+      text-align: center;
+}
+.podium-down{
+      display: inline-block;
+}
+.rewards li{
+    display: inline-block;
+}
+
+.first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    margin: 0% auto;
+}
+
+.second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+}
+
+.third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+}
