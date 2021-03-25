@@ -28,4 +28,19 @@ for (let index = 0; index < numbers.length; index += 1) {
     controle = numbers[index];
   }
 }
-console.log(controle);
+console.log(controle); // imprime o maior valor dentro do array
+
+//Exercicio 6
+controle = 0
+for ( let conteudo of numbers) {
+  if (conteudo % 2 != 0) {
+    controle += 1;
+  }
+}
+if (controle = 0) {
+  console.log("nenhum valor ímpar encontrado");
+} else {
+  console.log(controle);
+}
+
+//
