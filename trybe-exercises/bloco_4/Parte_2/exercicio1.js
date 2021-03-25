@@ -21,3 +21,11 @@ else {
 }
 
 console.log(mediaAritmetica);
+
+let controle = 0;
+for (let index = 0; index < numbers.length; index += 1) {
+  if (numbers[index] > controle) {
+    controle = numbers[index];
+  }
+}
+console.log(controle);
