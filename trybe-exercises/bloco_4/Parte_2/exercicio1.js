@@ -11,4 +11,13 @@ for ( let conteudo2 of numbers ) {
 }
 console.log(soma);
 
-console.log(soma/numbers.length);
+let mediaAritmetica = soma/numbers.length;
+
+if (mediaAritmetica > 20){
+  console.log('valor maior que 20');
+}
+else {
+  console.log('valor menos ou igual a 20');
+}
+
+console.log(mediaAritmetica);
