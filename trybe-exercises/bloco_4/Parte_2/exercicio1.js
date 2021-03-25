@@ -43,4 +43,13 @@ if (controle = 0) {
   console.log(controle);
 }
 
-//
+// Exercicio 7
+controle = numbers[0];
+for (let index = 1; index < numbers.length; index += 1) {
+  if (numbers[index] < controle) {
+    controle = numbers[index];
+  }
+}
+console.log(controle);
+
+//Exercicio 8
