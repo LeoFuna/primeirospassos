@@ -10,3 +10,5 @@ for ( let conteudo2 of numbers ) {
   soma += conteudo2;
 }
 console.log(soma);
+
+console.log(soma/numbers.length);
