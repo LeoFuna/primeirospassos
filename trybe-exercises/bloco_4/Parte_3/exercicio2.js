@@ -1,4 +1,4 @@
-const input = -1;
+const input = 5;
 let line = '';
 
 if (input <=1 ) {
