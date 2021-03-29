@@ -71,3 +71,13 @@ function whoRepeatsMore(numbers) {
 }
 
 console.log(whoRepeatsMore([2, 3, 2, 5, 8, 2, 3]));
+
+//Exercicio 6
+function sumToMax(number) {
+  let total = 0;
+  for (let index = 1; index <= number; index += 1) {
+    total += index;
+  }
+  return total;
+}
+console.log(sumToMax(5));
