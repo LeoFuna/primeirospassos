@@ -49,3 +49,25 @@ function hugestName(names) {
   return majorName;
 }
 console.log(hugestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+//Exercicio 5
+function whoRepeatsMore(numbers) {
+  
+  let contMajor = 0;
+  let mostRepeat = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    let cont = 0;
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+      if ( numbers[index] === numbers[index2]) {
+        cont += 1;
+      }
+    }
+    if (cont >= contMajor) {
+      contMajor = cont;
+      mostRepeat = numbers[index];
+    }
+  }
+  return mostRepeat;
+}
+
+console.log(whoRepeatsMore([2, 3, 2, 5, 8, 2, 3]));
