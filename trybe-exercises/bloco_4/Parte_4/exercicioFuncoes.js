@@ -25,3 +25,15 @@ function indexMajor(enterArray) {
 console.log(indexMajor([2, 3, 6, 7, 10, 1]));
 
 //Exercicio 3
+function indexMinor(enterArray) {
+  let minorNumber = enterArray[0];
+  let minorIndex = 0;
+  for (let index = 0; index < enterArray.length ; index += 1) {
+    if ( enterArray[index] < minorNumber ) {
+      minorNumber = enterArray[index];
+      minorIndex = index;
+    }
+  }
+  return minorIndex;
+}
+console.log(indexMinor([2, 4, 6, 7, 10, 0, -3]));
