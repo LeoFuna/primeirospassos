@@ -37,3 +37,15 @@ function indexMinor(enterArray) {
   return minorIndex;
 }
 console.log(indexMinor([2, 4, 6, 7, 10, 0, -3]));
+
+//Exercicio 4 
+function hugestName(names) {
+  let majorName = '';
+  for ( let index = 0 ; index < names.length; index += 1) {
+    if (names[index].length > majorName.length ) {
+      majorName = names[index];
+    }
+  }
+  return majorName;
+}
+console.log(hugestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
