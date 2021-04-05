@@ -81,3 +81,8 @@ function sumToMax(number) {
   return total;
 }
 console.log(sumToMax(5));
+
+//Exercicio 7
+function verifyEndOfWord(word, ending) {
+  
+}
