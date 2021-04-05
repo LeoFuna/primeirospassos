@@ -46,15 +46,9 @@
       
       for (let index = 0; index < document.getElementsByTagName("p").length; index += 1) {
         let goToUpperCase = document.getElementsByTagName("p")[index].innerText;
+        console.log(goToUpperCase);
         document.getElementsByTagName("p")[index].innerText = goToUpperCase.toUpperCase();
       }
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
     </script>
   </body>
 </html>
