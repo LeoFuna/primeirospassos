@@ -85,10 +85,27 @@
       newImg.src = 'https://picsum.photos/200 ';
       newImg.className = 'small-image';
       document.querySelector('.left-content').appendChild(newImg);
+
+      let newUl = document.createElement('ul');
+      document.querySelector('.right-content').appendChild(newUl);
+      function createLi(textWrited) {
+        let newLi = document.createElement('li');
+        newLi.innerText = textWrited;
+        document.querySelector('ul').appendChild(newLi);
+      }
+      createLi('Um');
+      createLi('Dois');
+      createLi('Três');
+      createLi('Quatro');
+      createLi('Cinco');
+      createLi('Seis');
+      createLi('Sete');
+      createLi('Oito');
+      createLi('Nove');
+      createLi('Dez');
+
     </script>
 <!-- 
-Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
-Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2. -->
   </body>
 </html>
