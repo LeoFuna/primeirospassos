@@ -20,3 +20,20 @@ for (let index = 1; index < 32; index += 1) {
 dezDaysList.push(1);
 dezDaysList.push(2);
 console.log(dezDaysList);
+
+function createDays(day) {
+  let element = document.createElement('li');
+  element.className = 'day';
+  element.innerText = day;
+  if (day === 24 || day === 25 || day === 31) {
+    element.classList.add('holiday');
+  }
+  if (day === 4 || day === 11 || day === 18 || day === 25){
+    element.classList.add('friday');
+  }
+  document.getElementById('days').appendChild(element);
+}
+
+for (let index = 0; index < dezDaysList.length; index += 1) {
+  createDays(dezDaysList[index]);
+}
