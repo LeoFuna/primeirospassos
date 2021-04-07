@@ -17,8 +17,6 @@ let dezDaysList = [29,30];
 for (let index = 1; index < 32; index += 1) {
   dezDaysList.push(index);
 }
-dezDaysList.push(1);
-dezDaysList.push(2);
 
 function createDays(day) {
   let element = document.createElement('li');
@@ -45,8 +43,8 @@ function holidayButton(buttonName) {
 }
 holidayButton('Feriados');
 
-let theButton = document.getElementById('btn-holiday');
-theButton.addEventListener('click', changeColorButton);
+let theHolidayButton = document.getElementById('btn-holiday');
+theHolidayButton.addEventListener('click', changeColorButton);
 function changeColorButton() {
   if (document.getElementsByClassName('holiday')[0].style.backgroundColor === 'blue') {
     let allHolidays = document.getElementsByClassName('holiday')
@@ -68,3 +66,24 @@ function fridayButton(buttonName) {
   document.querySelector('.buttons-container').appendChild(element);
 }
 fridayButton('Sexta-feira');
+
+let theFridayButton = document.getElementById('btn-friday');
+theFridayButton.addEventListener('click', changeButtonText);
+function changeButtonText() {
+  let allFridays = document.getElementsByClassName('friday');
+  if (allFridays[0].innerText !== 'SEXTOU') {
+    for (let index = 0; index < allFridays.length; index += 1) {
+      allFridays[index].innerText = 'SEXTOU';
+    }
+  } 
+  else 
+  {
+    let fridaysInNumber = [];
+    for (let index = 4; index < dezDaysList.length; index += 7) {
+      fridaysInNumber.push(index);
+    }
+    for (let index = 0; index < allFridays.length; index += 1) {
+      allFridays[index].innerText = fridaysInNumber[index];
+    }
+  }
+}
