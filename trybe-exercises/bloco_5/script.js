@@ -13,4 +13,10 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Escreva seu código abaixo.
+let dezDaysList = [29,30];
+for (let index = 1; index < 32; index += 1) {
+  dezDaysList.push(index);
+}
+dezDaysList.push(1);
+dezDaysList.push(2);
+console.log(dezDaysList);
