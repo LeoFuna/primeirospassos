@@ -37,3 +37,11 @@ function createDays(day) {
 for (let index = 0; index < dezDaysList.length; index += 1) {
   createDays(dezDaysList[index]);
 }
+
+function holidayButtons(buttonName) {
+  let element = document.createElement('button');
+  element.setAttribute('id', 'btn-holiday');
+  element.innerText = buttonName;
+  document.querySelector('.buttons-container').appendChild(element);
+}
+holidayButtons('Feriados')
