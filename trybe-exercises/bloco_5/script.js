@@ -43,7 +43,7 @@ function holidayButton(buttonName) {
   element.innerText = buttonName;
   document.querySelector('.buttons-container').appendChild(element);
 }
-holidayButton('Feriados')
+holidayButton('Feriados');
 
 let theButton = document.getElementById('btn-holiday');
 theButton.addEventListener('click', changeColorButton);
@@ -60,3 +60,11 @@ function changeColorButton() {
     }
   }
 }
+
+function fridayButton(buttonName) {
+  let element = document.createElement('button');
+  element.setAttribute('id', 'btn-friday');
+  element.innerText = buttonName;
+  document.querySelector('.buttons-container').appendChild(element);
+}
+fridayButton('Sexta-feira');
