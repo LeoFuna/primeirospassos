@@ -19,7 +19,6 @@ for (let index = 1; index < 32; index += 1) {
 }
 dezDaysList.push(1);
 dezDaysList.push(2);
-console.log(dezDaysList);
 
 function createDays(day) {
   let element = document.createElement('li');
@@ -38,10 +37,26 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
   createDays(dezDaysList[index]);
 }
 
-function holidayButtons(buttonName) {
+function holidayButton(buttonName) {
   let element = document.createElement('button');
   element.setAttribute('id', 'btn-holiday');
   element.innerText = buttonName;
   document.querySelector('.buttons-container').appendChild(element);
 }
-holidayButtons('Feriados')
+holidayButton('Feriados')
+
+let theButton = document.getElementById('btn-holiday');
+theButton.addEventListener('click', changeColorButton);
+function changeColorButton() {
+  if (document.getElementsByClassName('holiday')[0].style.backgroundColor === 'blue') {
+    let allHolidays = document.getElementsByClassName('holiday')
+    for (let index = 0; index < allHolidays.length; index += 1) {
+      allHolidays[index].style.backgroundColor = 'rgb(238,238,238)';
+    }
+  } else {
+    let allHolidays = document.getElementsByClassName('holiday')
+    for (let index = 0; index < allHolidays.length; index += 1) {
+      allHolidays[index].style.backgroundColor = 'blue';
+    }
+  }
+}
