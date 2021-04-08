@@ -1,0 +1,37 @@
+.view-port {
+  width: 70vw;
+  margin:auto;
+}
+
+header {
+  text-align: center;
+}
+
+#buttons {
+  width: 12vw;
+  background-color:lightgray;
+  float: left;
+  text-align: center;
+  border: 1.5px solid black;
+}
+
+button {
+  width: 12vw; 
+}
+
+#hero-title {
+  font-size: 300%;
+  margin-top: 3vh;
+  margin-bottom: 1.5vh;
+}
+
+#subHero-title {
+  font-weight: 200;
+  font-family: Arial;
+  font-style: italic;
+  margin-top: 0px;
+}
+
+#main-content {
+  text-align: justify;
+}
