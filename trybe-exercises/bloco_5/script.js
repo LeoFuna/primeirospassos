@@ -97,3 +97,11 @@ function zoomIn(element) {
 function zoomOut(element) {
   element.target.style.transform = 'scale(1)';
 }
+
+function addTask(task) {
+  let newElement = document.createElement('span');
+  newElement.innerText = task;
+  document.querySelector('.my-tasks').appendChild(newElement);
+}
+addTask('cozinhar')
+addTask('estudar para a Trybe')
