@@ -1,6 +1,8 @@
 .view-port {
   width: 70vw;
   margin:auto;
+  background-color: white;
+  color: black;
 }
 
 header {
