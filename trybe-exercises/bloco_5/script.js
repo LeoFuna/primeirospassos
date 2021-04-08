@@ -87,3 +87,13 @@ function changeButtonText() {
     }
   }
 }
+
+let captureZoomElement = document.querySelectorAll('.day')[2];
+captureZoomElement.addEventListener('mouseover', zoomIn);
+captureZoomElement.addEventListener('mouseleave', zoomOut);
+function zoomIn(element) {
+  element.target.style.transform = 'scale(2)';
+}
+function zoomOut(element) {
+  element.target.style.transform = 'scale(1)';
+}
