@@ -1,8 +1,9 @@
 .view-port {
   width: 70vw;
   margin:auto;
-  background-color: white;
-  color: black;
+  background-color: rgb(47,52,55);;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 header {
@@ -36,4 +37,6 @@ button {
 
 #main-content {
   text-align: justify;
+  margin-top: -20px;
+  padding-top: 20px;
 }
