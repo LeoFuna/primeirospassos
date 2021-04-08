@@ -103,5 +103,12 @@ function addTask(task) {
   newElement.innerText = task;
   document.querySelector('.my-tasks').appendChild(newElement);
 }
-addTask('cozinhar')
-addTask('estudar para a Trybe')
+addTask('cozinhar');
+
+function colorForTask(color) {
+  let element = document.createElement('div');
+  element.style.backgroundColor = color;
+  element.className = 'task';
+  document.querySelector('.my-tasks').appendChild(element);
+}
+colorForTask('magenta');
