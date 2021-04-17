@@ -7,3 +7,11 @@ body {
 fieldset {
   text-align: center;
 }
+
+#btn-div {
+  text-align: center;
+}
+#submit-btn {
+  text-align: center;
+  width: 120px;
+}
