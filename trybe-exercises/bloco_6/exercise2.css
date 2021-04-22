@@ -4,3 +4,48 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+header p {
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 900;
+}
+
+header nav {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+header nav ul {
+  font-size: 21px;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header nav ul li {
+  margin-bottom: 10px;
+}
+
+.aside-one,
+.aside-two {
+  text-align: center;
+}
+
+.aside-one ul,
+.aside-two ul {
+  list-style: none;
+  margin-right: 50px;
+  text-align: left;
+}
+
+.aside-one ul li,
+.aside-two ul li {
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
