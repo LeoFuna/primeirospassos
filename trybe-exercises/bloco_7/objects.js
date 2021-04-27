@@ -36,26 +36,20 @@ const order = {
 
 const customerInfo = (order) => {
   // Adicione abaixo as informações necessárias.
-
+  console.log(`Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, No: ${order.address.number}, AP: ${order.address.apartment}`);
 }
 
 customerInfo(order);
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
-
+  order['name'] = 'Luiz Silva';
+  order.payment.total = '50';
+  console.log(`Olá ${order.name}, o total do seu pedido de ${order.order.pizza} e ${order.order.drinks.coke.type} é R$ ${order.payment.total},00.`);
 }
 
 orderModifier(order);
 
-
-
-/* Agora você vai fazer alguns exercícios de fixação.
-1 Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
- Note que o parâmetro da função já está sendo passado na chamada da função.
-2 Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e Coca-Cola Zero é R$ 50,00."
- Modifique o nome da pessoa compradora.
- Modifique o valor total da compra para R$ 50,00.*/
 
  //Exercicio 2
 
@@ -79,42 +73,30 @@ const lesson3 = {
   turno: 'noite',
 };
 
-/* 
-1 Crie uma função para adicionar o turno da manhã na lesson2 . Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
-2 Crie uma função para listar as keys de um objeto. Essa função deve receber um objeto como parâmetro.
-3 Crie uma função para mostrar o tamanho de um objeto.
-4 Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
-5 Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte: 
+const addTurnoManha = (objeto, chave, valor) => objeto[chave] = valor; // função que atribui nova chave e valor a um objeto
 
-console.log(allLessons);
 
-{
-  lesson1:
-   { materia: 'Matemática',
-     numeroEstudantes: 20,
-     professor: 'Maria Clara',
-     turno: 'manhã' },
-  lesson2:
-   { materia: 'História',
-     numeroEstudantes: 20,
-     professor: 'Carlos',
-     turno: 'noite' },
-  lesson3:
-   { materia: 'Matemática',
-     numeroEstudantes: 10,
-     professor: 'Maria Clara',
-     turno: 'noite' }
-};
+const listKeys = objeto => Object.keys(objeto); // função que retorna as chaves de um obj passado
 
-6 Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
-7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
-  console.log(getValueByNumber(lesson1, 0));
-  Output: 'Matématica'
+const objectLength = objeto => console.log(listKeys(objeto).length); // função que imprime o tamanho do objeto à partir das suas keys
 
-8 Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
-  console.log(verifyPair(lesson3, 'turno', 'noite'));
-  Output: true,
-console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
- Output: false
+const listValues = objeto => Object.values(objeto); // função que lista os valores dentro de um objeto
 
-*/
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+
+const totalEstudantes = objeto => allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes; // função retorna total de estudantes em todas as salas
+
+const getValueByNumber = (chave, posicao) => { // função que pega o valor de uma das chaves dentro do objeto allLessons
+  const valores = Object.values(allLessons[chave]);
+  return valores[posicao];
+}
+
+const verifyPair = (objeto, chave, valor) => {
+  const chaveValores = Object.entries(objeto);
+  let verifier = false;
+  for( let index in chaveValores) {
+    chaveValores[index][0] === chave && chaveValores[index][1] === valor ? verifier = true : verifier;
+  }
+  return verifier;
+}
+console.log(verifyPair(lesson1, 'professor', 'Maria Clara'));
