@@ -244,3 +244,15 @@ function oldBooksEx6() {
 assert.deepStrictEqual(oldBooksEx6(), expectedResult);
 
 //Exercicio 7
+
+expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  const authorSelected = books.find(book => {
+    const splitedName = book.author.name.split(' ');
+    return splitedName[0][1] === '.' && splitedName[1][1] === '.' && splitedName[2][1];
+  })
+  return authorSelected.name;
+}
+
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
