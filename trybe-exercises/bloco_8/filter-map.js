@@ -1,5 +1,5 @@
 const assert = require('assert');
-
+//Exercicio 1
 const books = [
   {
     id: 1,
@@ -63,7 +63,7 @@ const books = [
   },
 ];
 
-const expectedResult = [
+let expectedResult = [
   'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
   'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
   'Fundação - Ficção Científica - Isaac Asimov',
@@ -77,3 +77,43 @@ function formatedBookNames() {
 }
 
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
+
+//Exercicio 2
+
+expectedResult = [
+  {
+    age: 31,
+    author: 'Isaac Asimov',
+  },
+  {
+    age: 38,
+    author: 'H. P. Lovecraft',
+  },
+  {
+    age: 39,
+    author: 'Stephen King',
+  },
+  {
+    age: 43,
+    author: 'George R. R. Martin',
+  },
+  {
+    age: 45,
+    author: 'Frank Herbert',
+  },
+  {
+    age: 62,
+    author: 'J. R. R. Tolkien',
+  },
+];
+
+function nameAndAge() {
+  const ageOnRelease = books.map((livro) => {
+    const nomeAutor = livro.author.name;
+    const idade = livro.releaseYear - livro.author.birthYear;
+    return {age: idade, author: nomeAutor};
+  })
+  return ageOnRelease.sort((book1, book2) => book1.age - book2.age);
+}
+
+assert.deepStrictEqual(nameAndAge(), expectedResult);
