@@ -124,3 +124,43 @@ function longestNamedBook() {
 }
 
 assert.deepStrictEqual(longestNamedBook(), expectedResult);
+
+//Exercicio 5
+
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+function containsA() {
+  return names.reduce((cont, name) => {
+    name.split('').forEach(letter => {
+      if (letter === 'a' || letter === 'A') {
+        cont += 1;    
+      }
+    });
+    return cont;
+  }, 0);
+}
+assert.deepStrictEqual(containsA(), 20);
+
+//Exercicio 6
+
+const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
+const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
+
+function studentAverage() {
+  return grades.map((gradesOfGrades, index) => {
+    const sumGrades = gradesOfGrades.reduce(((total, grade) => total + grade), 0);
+    return {name: students[index], average: (sumGrades)/gradesOfGrades.length};
+  })
+}
+
+expected = [
+  { name: 'Pedro Henrique', average: 7.8 },
+  { name: 'Miguel', average: 9.2 },
+  { name: 'Maria Clara', average: 8.8 },
+];
+
+assert.deepStrictEqual(studentAverage(), expected);
