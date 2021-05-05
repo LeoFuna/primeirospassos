@@ -93,3 +93,15 @@ function allNames() {
 assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');
 
 //Exercicio 3
+
+let expectedResult = 43;
+
+function averageAge() {
+  const ageOnRelease = books.map(book => book.releaseYear - book.author.birthYear);
+  const averageAgeAuthor= (ageOnRelease.reduce((acc, age) => acc + age)) / ageOnRelease.length;
+  return averageAgeAuthor;
+}
+
+assert.strictEqual(averageAge(), expectedResult);
+
+//Exercicio 4
