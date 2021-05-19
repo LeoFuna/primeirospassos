@@ -1,4 +1,4 @@
-const { uppercase, getUserName } = require('./testes-assincronos');
+const { uppercase, getUserName, getRepos } = require('./testes-assincronos');
 
 describe('Testa retorno da função Uppercase', () => {
   it('Deve ser uma string totalmente maiúscula', done => { //Atenção ao done()
@@ -36,5 +36,14 @@ describe('Testa retorno da função getUserName com async/await', () => {
     catch(error) {
       expect(error.error).toBe('User with 7 not found.');
     }
+  });
+});
+
+//Exercicio 4
+describe('Testa a função getRepos', () => {
+  it('Deve retornar o repositorio do todoList', async () => {
+    const repoNames = await getRepos('https://api.github.com/orgs/tryber/repos');
+    expect(repoNames).toContain('sd-01-week4-5-project-todo-list');
+    expect(repoNames).toContain('sd-01-week4-5-project-meme-generator');
   });
 });
