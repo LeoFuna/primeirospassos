@@ -1,4 +1,4 @@
-const { uppercase, getUserName, getRepos } = require('./testes-assincronos');
+const { uppercase, getUserName, getRepos, getAnimal } = require('./testes-assincronos');
 
 describe('Testa retorno da função Uppercase', () => {
   it('Deve ser uma string totalmente maiúscula', done => { //Atenção ao done()
@@ -45,5 +45,27 @@ describe('Testa a função getRepos', () => {
     const repoNames = await getRepos('https://api.github.com/orgs/tryber/repos');
     expect(repoNames).toContain('sd-01-week4-5-project-todo-list');
     expect(repoNames).toContain('sd-01-week4-5-project-meme-generator');
+  });
+});
+
+//Exercicio 6
+
+describe('Testando promise - findAnimalByName', () => {
+  describe('Quando existe o animal com o nome procurado', () => {
+    test('Retorne o objeto do animal', () => {
+      expect.assertions(1);
+      return getAnimal('Dorminhoco').then(animal => {
+        expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch(error => {
+        expect(error).toEqual('Nenhum animal com esse nome!');
+      });
+    });
   });
 });
